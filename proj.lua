@@ -129,3 +129,54 @@ for key, value in pairs(days) do
 
 end
 
+-- tables 
+
+somerandomtable = {} 
+
+for i = 1,10 do 
+
+	
+somerandomtable[i] = i 
+end
+
+
+io.write(" this number is picked by andrew tate", somerandomtable[7] ,"\n")
+io.write("the number stored inside this table = ", #somerandomtable, "\n" )
+
+table.insert(somerandomtable,3,6) 
+
+io.write("hahaha i inserted a value and its ",somerandomtable[3],"\n" )
+
+print(table.concat(somerandomtable," , "))
+
+table.remove(somerandomtable,1) 
+
+print(table.concat(somerandomtable," , ")) 
+
+-- multi table arrays 
+
+amultitable = {} 
+
+for i = 0,9 do 
+amultitable[i] = {} 
+
+for j = 0,9 do 
+	amultitable[i][j] = tostring(i) .. tostring(j) 
+
+end  
+end 
+
+io.write("i print funni number", amultitable[6][9],"\n" )
+
+
+
+for i = 0,9 do 
+
+
+for j = 0,9 do 
+io.write(amultitable[i][j]," : " )
+
+end 
+print()
+end 
+
