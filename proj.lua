@@ -119,3 +119,13 @@ io.write(i , "\n" )
 
 end
 
+-- for in loops 
+
+days = { "monday","tuesday","wensday","thursday","friday","sunday" } 
+
+
+for key, value in pairs(days) do 
+	io.write(value,"\n") 
+
+end
+
