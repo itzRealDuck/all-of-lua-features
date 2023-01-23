@@ -102,11 +102,14 @@ repeat
 
 	Guess = io.read() 
 
-until tostring(Guess) == "money" 
-if Guess == "balls" then 
 
-	io.write("bruh why balls tho ", "\n" ) 
-end
+if Guess == "money" then 
+	break 
+
+else 
+	io.write("bad") 
+end 
+until  Guess  
 
 
 -- for loops 
