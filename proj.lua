@@ -179,4 +179,36 @@ io.write(amultitable[i][j]," : " )
 end 
 print()
 end 
+-- functions 
+
+
+function getSum(num1 , num2) 
+
+	return num1 + num2 
+end 
+
+print(string.format(" 5 + 2 = %d  ", getSum(5,2) )) 
+
+function splitStr(TheString)
+
+StringTable = {} 
+
+
+local i = 1 
+
+for word in string.gmatch(TheString, "[^%s]+") do 
+
+	StringTable[i] = word 
+	i = i + 1 
+	 end 
+return StringTable, i
+end  
+
+splitStrTable, numOfStr = splitStr("the turtle") 
+
+for j = 1, numOfStr  do 
+	print(string.format("%d : %s ", j ,splitStrTable[j])) 
+end 
+
+
 
