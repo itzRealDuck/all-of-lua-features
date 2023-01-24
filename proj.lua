@@ -253,11 +253,14 @@ print(getI())
 
 -- cortine 
 
-co = coroutine.create(function() for i = 1,10 do print(i)  
+co = coroutine.create(function() 
+	for i = 1,10 do print(i)  
 print(coroutine.status(co)) 
-if i == 1 then 
-	coroutine.yield() end 
+if i == 5 then 
+	coroutine.yield()  
 end 
+end  
+end) 
   
 
 print(coroutine.status(co))  
@@ -266,18 +269,18 @@ repeat
 	io.write("would you like to resume the coroutine status? enter Y to say yes and N to say no and it must be capital ", "\n" ) 
 
 
-	cor = io.read 
+	cor = io.read() 
 
-if cor == Y then 
+if cor == "Y" then 
 
 coroutine.resume(co) 
 
-print("you resumed it!" ) 
+io.write("you resume it!!")
 
 break 
 
 else 
-	print("you not resume :(")
+	io.write("you not write :((( ","\n" )
 
 end 
 
