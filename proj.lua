@@ -210,5 +210,43 @@ for j = 1, numOfStr  do
 	print(string.format("%d : %s ", j ,splitStrTable[j])) 
 end 
 
+-- vardic functions 
+
+function getSumMore(...)
 
 
+local sum = 0 
+
+for k, v in pairs{...} do 
+
+	sum = sum + v 
+
+end 
+
+return sum 
+end 
+
+io.write("sum =", getSumMore(1,2,3,4,5,6,7,8,9,10),"\n"  )
+
+doubleit = function(x) return x * 2  end 
+
+io.write("i am gonna double the number 4!   ", doubleit(4),"\n" )
+
+function somerandomfunction() 
+
+	local i = 0 
+
+	return function() 
+
+		i = i + 1 
+
+		return i 
+
+	end 
+end 
+
+
+getI = somerandomfunction() 
+
+print(getI())
+print(getI())
