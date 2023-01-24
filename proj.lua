@@ -284,4 +284,17 @@ else
 
 end 
 
-until cor
+until cor 
+
+co2 = coroutine.create(function() 
+for i = 101,110,1 do 
+print(i) 
+
+end 
+end 
+
+	)
+
+
+	 coroutine.resume(co2) 
+	 	coroutine.resume(co)
