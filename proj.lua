@@ -297,4 +297,28 @@ end
 
 
 	 coroutine.resume(co2) 
-	 	coroutine.resume(co)
+	 	coroutine.resume(co) 
+
+
+-- yay we gonna do files but remember to create a file for this  
+
+files = io.open("test2.lua", "w+") 
+
+files:write(" echo yo i  am def  using for scripting in dotfiles lmao \n") 
+files:seek("set", 0) 
+
+print(files:read("*a")) 
+
+files:close() 
+
+files = io.open("test.lua","a+") 
+files:write("bru brah\n") 
+files:write("nah bru \n") 
+files:seek("set",0,1)
+
+print(files:read("*a")) 
+files:close()
+
+
+
+
