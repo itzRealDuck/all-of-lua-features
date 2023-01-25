@@ -318,7 +318,62 @@ files:seek("set",0,1)
 
 print(files:read("*a")) 
 files:close()
+-- modules
+
+convertModules = require("forproj") 
+print(string.format("%.3f cm",convertModules.ftToCm(12))) 
+
+-- medatabels 
+
+aTable2 = {} 
+
+for x = 1, 10 do 
+
+	aTable2[x] = x 
+end  
+
+mt = { 
+
+__add = function(table1,table2)
+ sumTable = {} 
+
+ for y = 1, #table1 do 
+
+	if (table1[y] ~= nil) and (table2[y] ~= nil) then 
+
+		sumTable = table1[y] + table2[y]
+ 
+	else 
+
+		sumTable[y] = 0
+	end 
+end 
+
+return sumTable
+end, 
+
+__eq = function(table1, table2)  
+	return table1.value == table2.value  
+end, 
+
+__lt = function(table1, table2)
+ return table1.value < table2.value 
+end, 
+
+__le = function(table1, table2 )
+ return table1.value <= table2.value 
+end, 
+	}
+
+	setmetatable(aTable2, mt)  
+
+	print(aTable2 == aTable2)  
 
 
+addTable2 = {} 
+addTable2 = aTable2 + aTable2 
 
+for i = 1, #addTable2 do 
 
+	print(addTable2[i] )  
+end
