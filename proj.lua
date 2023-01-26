@@ -341,8 +341,8 @@ __add = function(table1,table2)
 
 	if (table1[y] ~= nil) and (table2[y] ~= nil) then 
 
-		sumTable = table1[y] + table2[y]
- 
+		sumTable[y] = table1[y] + table2[y]
+
 	else 
 
 		sumTable[y] = 0
@@ -371,9 +371,11 @@ end,
 
 
 addTable2 = {} 
-addTable2 = aTable2 + aTable2 
+addTable2 = aTable2 + aTable2  
+
 
 for i = 1, #addTable2 do 
-
 	print(addTable2[i] )  
-end
+
+end 
+
