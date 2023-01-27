@@ -377,5 +377,64 @@ addTable2 = aTable2 + aTable2
 for i = 1, #addTable2 do 
 	print(addTable2[i] )  
 
+end  
+
+-- OOP 
+
+
+person = {Height = 5 , Weight = 100 , bitches = 0,name = "goofy ahh lookin mf "} 
+
+function person:new (Height, Weight, bitches, name) 
+
+	setmetatable({}, person) 
+
+	self.Height = Height 
+	self.Weight = Weight 
+	self.bitches = bitches 
+	self.name = name  
+
+	return self 
 end 
+function person:toString() 
+personStr = string.format( "%s weight %.1f is Libs ,  and height is %.1f  feet, and gets  bitches %.1f  " ,self.name , self.Weight ,self.Height, self.bitches) 
+ 
+return personStr 
+
+end 
+
+spot = person:new(150,4,0, "goofyahh looking mf") 
+print(spot.Weight) 
+
+print(spot:toString()) 
+
+cat = person:new()
+cat = {Height = 2 , Weight = 13,name = "lucy"} 
+
+function cat:new (name,Height,Weight) 
+
+	setmetatable({}, cat) 
+
+	self.Height = Height 
+	self.Weight = Weight 
+	self.name = name  
+
+return self 
+end 
+function cat:toString() 
+	catStr = string.format( "%s is his name   ,  and height is %.1f  feet,and his weight is %.1f  " ,self.name , self.Height ,self.Weight) 
+	 
+	return catStr 
+	
+	end 
+
+
+lucy = cat:new("lucy",13,1) 
+
+print(lucy.Weight) 
+
+print(lucy:toString())
+
+
+
+
 
