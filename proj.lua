@@ -432,7 +432,10 @@ lucy = cat:new("lucy",13,1)
 
 print(lucy.Weight) 
 
-print(lucy:toString())
+print(lucy:toString()) 
+
+
+-- 
 
 
 
